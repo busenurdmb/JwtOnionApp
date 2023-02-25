@@ -1,0 +1,39 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:55624",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "UdemyJwtApp.Back": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "applicationUrl": "http://localhost:5281",
+=======
+      "applicationUrl": "http://localhost:5280",
+>>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
+=======
+      "applicationUrl": "http://localhost:5280",
+>>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
