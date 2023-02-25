@@ -17,15 +17,7 @@ namespace UdemyJwtApp.Back.Core.Application.Features.CQRS.Handlers
 
         public async Task<Unit> Handle(RegisterUserCommandRequest request, CancellationToken cancellationToken)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
             await _repository.CreateAsync(new AppUser
-=======
-          await  _repository.CreateAsync(new AppUser
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-          await  _repository.CreateAsync(new AppUser
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             {
                 Username = request.Username,
                 Password = request.Password,

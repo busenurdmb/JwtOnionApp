@@ -4,14 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 using System.Security.Cryptography;
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-using System.Security.Cryptography;
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
 using System.Text;
 using UdemyJwtApp.Back.Core.Application.Interfaces;
 using UdemyJwtApp.Back.Core.Application.Mappings;
@@ -31,18 +24,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidIssuer = JwtTokenDefaults.ValidIssuer,
         ClockSkew = TimeSpan.Zero,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.Key)),
-<<<<<<< HEAD
-<<<<<<< HEAD
         ValidateIssuerSigningKey = true,
         ValidateLifetime = true,
-=======
-        ValidateIssuerSigningKey=true,
-        ValidateLifetime=true,
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-        ValidateIssuerSigningKey=true,
-        ValidateLifetime=true,
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
 
     };
 });
@@ -64,15 +47,7 @@ builder.Services.AddAutoMapper(opt =>
     {
         new ProductProfile(),
         new CategoryProfile(),
-<<<<<<< HEAD
-<<<<<<< HEAD
     });
-=======
-    }) ;
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-    }) ;
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
 });
 
 var app = builder.Build();

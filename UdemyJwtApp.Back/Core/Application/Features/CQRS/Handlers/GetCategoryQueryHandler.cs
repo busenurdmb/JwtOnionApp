@@ -21,23 +21,10 @@ namespace UdemyJwtApp.Back.Core.Application.Features.CQRS.Handlers
         public async Task<CategoryListDto?> Handle(GetCategoryQueryRequest request, CancellationToken cancellationToken)
         {
             var data = await _repository.GetByFilterAsync(x => x.Id == request.Id);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             return _mapper.Map<CategoryListDto>(data);
 
 
-=======
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-            
-                return _mapper.Map<CategoryListDto>(data);
-            
-            
-<<<<<<< HEAD
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
         }
     }
 }

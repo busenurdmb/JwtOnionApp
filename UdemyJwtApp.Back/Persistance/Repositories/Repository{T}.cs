@@ -16,52 +16,17 @@ namespace UdemyJwtApp.Back.Persistance.Repositories
 
         public async Task CreateAsync(T entity)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
-=======
-         await  _context.Set<T>().AddAsync(entity);
-          await  _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-         await  _context.Set<T>().AddAsync(entity);
-          await  _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-         await  _context.Set<T>().AddAsync(entity);
-          await  _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
         }
 
         public async Task<List<T>> GetAllAsync()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             return await _context.Set<T>().AsNoTracking().ToListAsync();
 
         }
 
         public async Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
-=======
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-          return  await _context.Set<T>().AsNoTracking().ToListAsync(); 
-           
-        }
-
-        public async  Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
         {
             return await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(filter);
         }
@@ -74,19 +39,7 @@ namespace UdemyJwtApp.Back.Persistance.Repositories
         public async Task RemoveAsync(T entity)
         {
             _context.Set<T>().Remove(entity);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             await _context.SaveChangesAsync();
-=======
-           await _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-           await _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-           await _context.SaveChangesAsync();
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
         }
 
         public async Task UpdateAsync(T entity)

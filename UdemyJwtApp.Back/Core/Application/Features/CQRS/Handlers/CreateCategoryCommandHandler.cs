@@ -21,15 +21,7 @@ namespace UdemyJwtApp.Back.Core.Application.Features.CQRS.Handlers
                 Definition = request.Definition
             });
             return Unit.Value;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
-            
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
         }
     }
 }

@@ -21,25 +21,11 @@ namespace UdemyJwtApp.Back.Core.Application.Features.CQRS.Handlers
             if (updatedProduct != null)
             {
                 updatedProduct.CategoryId = request.CategoryId;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 updatedProduct.Price = request.Price;
                 updatedProduct.Stock = request.Stock;
                 updatedProduct.Name = request.Name;
                 await _repository.UpdateAsync(updatedProduct);
 
-=======
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-                updatedProduct.Price= request.Price;
-                updatedProduct.Stock= request.Stock;
-                updatedProduct.Name= request.Name;
-                await _repository.UpdateAsync(updatedProduct);
-                    
-<<<<<<< HEAD
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
-=======
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             }
             return Unit.Value;
         }
