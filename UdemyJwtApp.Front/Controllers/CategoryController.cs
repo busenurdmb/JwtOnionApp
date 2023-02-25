@@ -56,7 +56,6 @@ namespace UdemyJwtApp.Front.Controllers
         public async Task<IActionResult> Create(CategoryCreateModel model)
         {
             if (ModelState.IsValid)
-<<<<<<< HEAD
             {
                 var token = User.Claims.FirstOrDefault(x => x.Type == "accesToken")?.Value;
                 if (token != null)
@@ -71,33 +70,12 @@ namespace UdemyJwtApp.Front.Controllers
                     {
                         return RedirectToAction("List");
                     }
-=======
-            { 
-           var token = User.Claims.FirstOrDefault(x => x.Type == "accesToken")?.Value;
-            if (token != null)
-            {
-                var client = _httpClientFactory.CreateClient();
-                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-
-                    var jsonData = JsonSerializer.Serialize(model);
-                    var content = new StringContent(jsonData,Encoding.UTF8,"application/json");
-                var response = await client.PostAsync("http://localhost:5280/api/Categories",content);
-                    if(response.IsSuccessStatusCode)
-                    {
-                        return RedirectToAction("List");
-                     }
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                     else
                     {
                         ModelState.AddModelError("", "Bir hata oluştu");
                     }
-<<<<<<< HEAD
                 }
 
-=======
-            }
-            
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
 
 
             }
@@ -111,13 +89,8 @@ namespace UdemyJwtApp.Front.Controllers
             {
                 var client = _httpClientFactory.CreateClient();
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-<<<<<<< HEAD
                 var response = await client.GetAsync($"http://localhost:5280/api/Categories/{id}");
                 if (response.IsSuccessStatusCode)
-=======
-           var response=   await  client.GetAsync($"http://localhost:5280/api/Categories/{id}");
-                if(response.IsSuccessStatusCode)
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                 {
 
                     var jsondata = await response.Content.ReadAsStringAsync();
@@ -127,11 +100,7 @@ namespace UdemyJwtApp.Front.Controllers
                     });
                     return View(result);
                 }
-<<<<<<< HEAD
 
-=======
-              
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             }
             return RedirectToAction("List");
         }
@@ -148,11 +117,7 @@ namespace UdemyJwtApp.Front.Controllers
                     var jsonData = JsonSerializer.Serialize(model);
                     var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                     var response = await client.PutAsync("http://localhost:5280/api/Categories", content);
-<<<<<<< HEAD
                     if (response.IsSuccessStatusCode)
-=======
-                    if(response.IsSuccessStatusCode)
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                     {
                         return RedirectToAction("List");
                     }
@@ -160,18 +125,10 @@ namespace UdemyJwtApp.Front.Controllers
                     {
                         ModelState.AddModelError("", "Bir hata oluştu");
                     }
-<<<<<<< HEAD
 
-=======
-                    
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                 }
             }
             return View(model);
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24

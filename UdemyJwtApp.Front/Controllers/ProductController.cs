@@ -101,13 +101,8 @@ namespace UdemyJwtApp.Front.Controllers
                     {
                         ModelState.AddModelError("", "Bir hata oluştu");
                     }
-<<<<<<< HEAD
                 }
 
-=======
-              }
-               
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             }
             return View(model);
         }
@@ -120,11 +115,7 @@ namespace UdemyJwtApp.Front.Controllers
                 var client = _httpClientFactory.CreateClient();
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-<<<<<<< HEAD
 
-=======
-             
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                 var responseProduct = await client.GetAsync($"http://localhost:5280/api/Products/{id}");
 
                 if (responseProduct.IsSuccessStatusCode)
@@ -140,31 +131,18 @@ namespace UdemyJwtApp.Front.Controllers
                     if (responseCategory.IsSuccessStatusCode)
                     {
                         var jsoCategoryData = await responseCategory.Content.ReadAsStreamAsync();
-<<<<<<< HEAD
 
-=======
-                       
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
                         var data = JsonSerializer.Deserialize<List<CategoryListModel>>(jsoCategoryData, new JsonSerializerOptions
                         {
                             PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                         });
-<<<<<<< HEAD
                         if (result != null)
                             result.Categories = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(data, "Id", "Definition");
-=======
-                        if(result!=null)
-                        result.Categories = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(data, "Id", "Definition");
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
 
                     }
                     return View(result);
                 }
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             }
             return RedirectToAction("List");
         }
@@ -176,11 +154,7 @@ namespace UdemyJwtApp.Front.Controllers
             if (data != null)
             {
                 var categories = JsonSerializer.Deserialize<List<SelectListItem>>(data);
-<<<<<<< HEAD
                 model.Categories = new SelectList(categories, "Value", "Text", model.CategoryId);
-=======
-                model.Categories = new SelectList(categories, "Value", "Text",model.CategoryId);
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
             }
             if (ModelState.IsValid)
             {
@@ -208,8 +182,4 @@ namespace UdemyJwtApp.Front.Controllers
         }
 
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24

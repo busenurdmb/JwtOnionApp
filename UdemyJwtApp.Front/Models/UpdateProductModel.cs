@@ -4,11 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace UdemyJwtApp.Front.Models
 {
     public class UpdateProductModel
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cab2227dde6026f0271e7c9b5bf05b2b4c1aef24
     {
         [Required(ErrorMessage = "Id boş geçilemez")]
 
